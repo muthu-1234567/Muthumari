@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navigation Styling */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #2c3e50;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ecf0f1;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #3498db;
+    }
+
+    /* Sections Styling */
+    section {
+      padding: 100px 20px 50px 20px;
+      text-align: center;
+      margin-top: 60px; /* Offset for fixed navigation */
+    }
+
+    section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    /* Profile Section */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .profile img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile h3 {
+      margin-top: 20px;
+      font-size: 2em;
+      color: #2c3e50;
+    }
+
+    .profile p {
+      font-size: 1.2em;
+      color: #7f8c8d;
+      margin-top: 10px;
+    }
+
+    /* Education Section */
+    .education {
+      background-color: #ecf0f1;
+      padding: 50px 0;
+    }
+
+    .education ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .education li {
+      font-size: 1.5em;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-weight: lighter;
+    }
+
+    /* Resume Section */
+    .resume {
+      margin-top: 60px;
+    }
+
+    .resume a {
+      text-decoration: none;
+      background-color: #3498db;
+      color: white;
+      padding: 12px 40px;
+      border-radius: 5px;
+      font-size: 1.2em;
+      transition: background-color 0.3s ease;
+    }
+
+    .resume a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Projects Section */
+    .projects {
+      margin-top: 60px;
+    }
+
+    .projects .project-cards {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .projects .card {
+      background-color: white;
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .projects .card h4 {
+      font-size: 1.5em;
+      color: #2c3e50;
+    }
+
+    .projects .card p {
+      font-size: 1.1em;
+      color: #7f8c8d;
+    }
+
+    .projects .card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Contact Section */
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 80%;
+      max-width: 500px;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1.1em;
+      background-color: #ecf0f1;
+    }
+
+    .contact button {
+      width: 80%;
+      max-width: 500px;
+      padding: 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Hi, I'm Muthumari K, AI enthusiast.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="profile">
+        <img src="Muu.jpg" alt="Your Profile Photo">
+        <h3>Muthumari</h3>
+        <p>Hello! I'm Muthumari, a 2nd-year B.sc Computer Science specializing in Artificial Intelligence. I'm passionate
+            about AI, Full Stack Development. My skills include Python, HTML, CSS, JavaScript, and tools like Canva, Git.
+            I;m also learning TensorFlow, OpenCV, VS Code and PyTorch to enhance my AI expertise. I'm driven, focused,
+            and always eager to learn and build impactful solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education">
+    <h2>Education</h2>
+    <ul>
+      <li>B.sc Computer Science with Artificial Intelligence - Anna Adarsh college for women(2023-Present)</li>
+      <li>HSC - Government Girls Higher Secondary School(2022-2023)</li>
+    </ul>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="resume">
+    <h2>My Resume</h2>
+    <a href="Muthu.Resume.pdf" target="_blank">Download My Resume</a>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-cards">
+      <div class="card">
+        <h4>Project 1</h4>
+        <p>Built a personal portfolio website with HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+      </div>
+      <div class="card">
+        <h4>Project 2</h4>
+        <p>Developed a weather app that fetches real-time data from an API using React.</p>
+      </div>
+      <div class="card">
+        <h4>Project 3</h4>
+        <p>Created a task management app using Node.js and Express, allowing users to manage their to-do lists.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form action="submit-form.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Created by Muthumari &copy; 2025</p>
+  </footer>
+
+  <script>
+    // Smooth scroll for navigation
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
